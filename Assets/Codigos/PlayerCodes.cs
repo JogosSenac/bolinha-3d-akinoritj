@@ -23,8 +23,8 @@ public class Movimentação : MonoBehaviour
     {
         if(estaVivo == true)
         {
-            moveH = Input.GetAxis("Vertical");
-            moveV = Input.GetAxis("Horizontal");
+            moveV = Input.GetAxis("Vertical");
+            moveH = Input.GetAxis("Horizontal");
             transform.position += new Vector3(moveH * Time.deltaTime, 0, moveV * Time.deltaTime);
 
             //Pulo
@@ -34,12 +34,6 @@ public class Movimentação : MonoBehaviour
             }
         }  
     }
-
-    private void OnTrigger(Collider other)
-    {
-        Destroy(other.gameObject);
-    }
-
     private void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.CompareTag("Lava"))
@@ -47,5 +41,9 @@ public class Movimentação : MonoBehaviour
             estaVivo = false;
             Time.timeScale = 0;
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
     }
 }
