@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Lava
   - Moeda
+  - "Ch\xE3o"
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - "Ch\xE3o"
   - Water
   - UI
   - 

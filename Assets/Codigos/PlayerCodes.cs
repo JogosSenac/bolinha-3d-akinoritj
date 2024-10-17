@@ -12,6 +12,7 @@ public class Movimentação : MonoBehaviour
     [SerializeField] private bool invertH;
     [SerializeField] private bool invertV;
     [SerializeField] private bool estaVivo;
+    [SerializeField] private bool isJumping;
 
     void Start()
     {
@@ -25,7 +26,7 @@ public class Movimentação : MonoBehaviour
         {
             moveV = Input.GetAxis("Vertical");
             moveH = Input.GetAxis("Horizontal");
-            transform.position += new Vector3(moveH * Time.deltaTime, 0, moveV * Time.deltaTime);
+            transform.position += new Vector3(moveH * velocidade * Time.deltaTime, 0, moveV * velocidade * Time.deltaTime);
 
             //Pulo
             if(Input.GetKeyDown(KeyCode.Space))
