@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Movimentação : MonoBehaviour
+public class Movimentacao : MonoBehaviour
 {
+
     private float moveH;
     private float moveV;
     private Rigidbody rb;
@@ -11,14 +13,21 @@ public class Movimentação : MonoBehaviour
     [SerializeField] private float forcaPulo;
     [SerializeField] private bool invertH;
     [SerializeField] private bool invertV;
-    [SerializeField] private bool estaVivo;
-    [SerializeField] private bool isJumping;
+    [SerializeField] public bool estaVivo;
+    [SerializeField] public int pontos;
+    [Header ("Sons da Bolinha")]
+    [SerializeField] private AudioClip pulo;
+    [SerializeField] private AudioClip pegaCubo;
+    [SerializeField] private AudioSource audioPlayer;
+
 
     void Start()
     {
         estaVivo = true;
-        rb = GetComponent<Rigidbody>();   
-    }
+        rb = GetComponent<Rigidbody>();  
+        audioPlayer = GetComponent<AudioSource>();
+        
+    } 
 
     void Update()
     {
@@ -32,6 +41,7 @@ public class Movimentação : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 rb.AddForce(transform.up * forcaPulo, ForceMode.Impulse);
+                audioPlayer.PlayOneShot(pulo);
             }
         }  
     }
@@ -46,5 +56,11 @@ public class Movimentação : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
+        audioPlayer.PlayOneShot(pegaCubo);
+        pontos++;
+    }
+    public int PegaPontos()
+    {
+        return pontos;
     }
 }
