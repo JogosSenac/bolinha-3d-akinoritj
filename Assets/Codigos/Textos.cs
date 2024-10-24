@@ -45,7 +45,7 @@ public class Textos : MonoBehaviour
             textoDeveres.text = ("Agora você pode ir para a próxima fase!");
         }
 
-        if(player.estaVivo == false)
+        if(player.VerificaVidaPlayer() == false)
         {
             textoDeveres.text = ("Você foi de Corinthians!!! arere o cortinas vai jogar a serie B eeeee");
         }

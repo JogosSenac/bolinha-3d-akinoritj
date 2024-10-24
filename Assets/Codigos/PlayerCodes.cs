@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movimentacao : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class Movimentacao : MonoBehaviour
     [SerializeField] private float forcaPulo;
     [SerializeField] private bool invertH;
     [SerializeField] private bool invertV;
-    [SerializeField] public bool estaVivo;
+    [SerializeField] private bool estaVivo;
     [SerializeField] public int pontos;
     [Header ("Sons da Bolinha")]
     [SerializeField] private AudioClip pulo;
@@ -52,6 +53,10 @@ public class Movimentacao : MonoBehaviour
             estaVivo = false;
             Time.timeScale = 0;
         }
+        if(other.gameObject.CompareTag("Neve") && pontos == 45)
+        {
+            SceneManager.LoadScene("Fase2");
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -62,5 +67,10 @@ public class Movimentacao : MonoBehaviour
     public int PegaPontos()
     {
         return pontos;
+    }
+
+    public bool VerificaVidaPlayer()
+    {
+        return estaVivo;
     }
 }
