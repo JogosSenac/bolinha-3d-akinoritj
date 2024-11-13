@@ -7,6 +7,7 @@ public class AtivadorInGame : MonoBehaviour
 {
         private Movimentacao player;
         public GameObject canvaRestart;
+        public GameObject canvaPlayAgain;
 
     public void Start()
         {

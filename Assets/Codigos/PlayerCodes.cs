@@ -17,6 +17,7 @@ public class Movimentacao : MonoBehaviour
     [SerializeField] private bool estaVivo;
     [SerializeField] public int pontos;
     [Header ("Sons da Bolinha")]
+    [SerializeField] private AudioClip morte;
     [SerializeField] private AudioClip pulo;
     [SerializeField] private AudioClip pegaCubo;
     [SerializeField] private AudioSource audioPlayer;
@@ -51,11 +52,16 @@ public class Movimentacao : MonoBehaviour
         if(other.gameObject.CompareTag("Lava"))
         {
             estaVivo = false;
+            audioPlayer.PlayOneShot(morte);
             Time.timeScale = 0;
         }
         if(other.gameObject.CompareTag("Neve") && pontos == 45)
         {
             SceneManager.LoadScene("Fase2");
+        }
+        if (other.gameObject.CompareTag("Vitoria"))
+        {
+            SceneManager.LoadScene("GameComplete");
         }
     }
     private void OnTriggerEnter(Collider other)

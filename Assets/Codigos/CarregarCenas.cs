@@ -25,6 +25,7 @@ public class CarregarCenas : MonoBehaviour
     public void TryAgain()
     {
         SceneManager.LoadScene("Fase2");
+        Time.timeScale = 1.0f;
 
     }
 }
