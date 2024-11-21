@@ -4884,12 +4884,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429484289}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &437467040 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-    type: 3}
-  m_PrefabInstance: {fileID: 562215466}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &444830606
 GameObject:
   m_ObjectHideFlags: 0
@@ -5919,104 +5913,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548401877}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &562215466
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 671333253}
-    m_Modifications:
-    - target: {fileID: 55722176915050780, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 296cfa07630d1a94985a3273bff69cb9, type: 2}
-    - target: {fileID: 6142935175943061756, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.50503004
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.50503
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.50503
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 30.505
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 46.745
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.736
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99988645
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.008802043
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.008649743
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.008649744
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6400931178793193666, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397506673497572045, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_Name
-      value: Moeda (43)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7397506673497572045, guid: 1cf2a07715b7ad549b5641c9559b3156,
-        type: 3}
-      propertyPath: m_TagString
-      value: Moeda
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1cf2a07715b7ad549b5641c9559b3156, type: 3}
 --- !u!1 &576553647
 GameObject:
   m_ObjectHideFlags: 0
@@ -6898,7 +6794,6 @@ Transform:
   - {fileID: 2089980648}
   - {fileID: 1478235871}
   - {fileID: 2145832726}
-  - {fileID: 437467040}
   - {fileID: 306630032}
   - {fileID: 67402541}
   m_Father: {fileID: 270325138}
